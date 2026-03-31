@@ -1,4 +1,10 @@
 package org.example;
 
-public class ClipboardFactory {
+public abstract class ClipboardFactory {
+    public abstract Conteudo criarConteudo();
+
+    public void copiarParaOClip() {
+        Conteudo c = criarConteudo();
+        c.processar();
+    }
 }
